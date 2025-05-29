@@ -7,6 +7,7 @@ from database import get_db, MovieModel
 
 router = APIRouter()
 
+
 @router.get("/movies/", response_model=MovieListResponseSchema)
 async def read_movies(
     db: AsyncSession = Depends(get_db),
